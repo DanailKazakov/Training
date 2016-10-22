@@ -3,7 +3,7 @@
 fscanf(STDIN, "%s", $city);
 fscanf(STDIN, "%f", $sales);
 
-if ($sales < 0 || $city != "Sofia" || $city != "Varna" || $city != "Plovdiv"){
+if ($sales < 0 || ($city != "Sofia" && $city != "Varna" && $city != "Plovdiv")){
     printf("error");
 }
 else {
