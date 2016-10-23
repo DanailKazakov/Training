@@ -1,0 +1,22 @@
+<?php
+
+fscanf(STDIN, "%d", $num);
+fscanf(STDIN, "%d", $first);
+
+$sum = $first;
+$biggest = $first;
+
+for ($i = 2; $i <= $num; $i++){
+    fscanf(STDIN, "%d", $temp);
+    $sum = $sum + $temp;
+    if ($biggest < $temp){
+        $biggest = $temp;
+    }
+}
+
+if ($sum/2 == $biggest){
+    printf("Yes\nSum = %d", $biggest);
+}
+else {
+    printf("No\nDiff = %d", abs($biggest - ($sum - $biggest)));
+}
